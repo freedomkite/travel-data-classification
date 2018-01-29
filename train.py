@@ -132,6 +132,7 @@ for epoch in range(args.epochs):
         tmp_acc = dev_acc
         test_data = pro.load_data('test_seg.txt')
         result = []
+		torch.save(model.state_dict(), 'bilstm_best_p.pkl')
 
         print len(test_data)
         for line in test_data:
